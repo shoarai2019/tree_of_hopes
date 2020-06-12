@@ -1,0 +1,68 @@
+
+
+#titlearea {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: none;
+    z-index: 999;
+    background-image: url(../img/start/tree.png);
+    -webkit-background-size: cover;
+    background-size:cover ;
+    padding-top: 80px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+#titlearea .title {
+    width: calc(2276px / 2);
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+#titlearea .agree a {
+    display: block;
+    background-image: url(../img/start/check.png);
+    -webkit-background-size: cover;
+    background-size:cover ;
+    width: calc(439px / 2);
+    height: calc(98px / 2);
+    overflow: hidden;
+    text-indent: -9999px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+#titlearea .agree a.checked {
+    background-image: url(../img/start/check_selected.png);
+}
+
+
+
+#titlearea .btn a {
+    display: block;
+    background-image: url(../img/start/btn.png);
+    -webkit-background-size: cover;
+    background-size:cover ;
+    width: calc(646px / 2);
+    height: calc(201px / 2);
+    overflow: hidden;
+    text-indent: -9999px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+}
+#titlearea .btn a:active {
+    background-image: url(../img/start/btn_down.png);
+}
+
+
+
+

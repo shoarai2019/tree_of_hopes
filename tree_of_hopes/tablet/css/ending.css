@@ -1,0 +1,25 @@
+
+#ending {
+    background-image: url(../img/ending/tree.png);
+    -webkit-background-size: cover;
+    background-size:cover ;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: none;
+    z-index: 999;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 120px;
+}
+
+#ending .title {
+    width: calc(1597px / 2);
+    margin-left: auto;
+    margin-right: auto;
+}
+

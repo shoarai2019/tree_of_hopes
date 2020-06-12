@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>sender</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h1>送信テスト</h1>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <div>
+        <input type="button" value="送信" @click="submit">
+    </div>
+</div>
+<script src="vendor/fabric.js/fabric.min.js"></script>
+<script src="vendor/axios/axios.min.js"></script>
+<script src="vendor/vue/vue.min.js"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                canvas: null
+            }
+        },
+        methods: {
+            initCanvas() {
+                this.canvas = new fabric.Canvas('canvas');
+                this.canvas.isDrawingMode = true;
+                this.canvas.freeDrawingBrush.color = 'blue';
+                this.canvas.freeDrawingBrush.width = 5;
+            },
+            renderMessages() {
+                const url = 'http://localhost/tree_of_hopes/api/messages';
+                axios.get(url)
+                    .then(res => {
+                        const messages = res.data.messages;
+
+                        messages.forEach(message => {
+                            const body = JSON.parse(message.body);
+                        })
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
+            },
+            submit() {
+                const url = 'http://localhost/tree_of_hopes/api/messages';
+
+                const data = JSON.stringify({
+                    color: 0,
+                    canvas: this.canvas.toSVG()
+                });
+
+                axios.post(url, data)
+                    .then(res => {
+                        console.log(res);
+                        this.canvas.clear();
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
+            }
+        },
+        async created() {
+            this.renderMessages();
+
+            await this.$nextTick();
+            this.initCanvas();
+        }
+    })
+</script>
+</body>
+</html>

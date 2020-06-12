@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+
+/*-----------------------------------------
+body
+----------------------------------------- */
+
+
+body {
+    background-color: #b1dcdc;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+}
+
+
+h1{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    margin-left: -20px;
+}
+#wrapper {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../img/back.png);
+}
+
+#contentarea {
+    position: relative;
+}
+
+#mycanvas {
+    position: relative;
+}
+
+
+/*
+
+#currentarea {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 100%;
+z-index: 1;
+}
+#currentarea .current {
+position: absolute;
+left: 0px;
+top: 0px;
+}
+#currentarea .current img {
+}
+
+
+#contentarea .white{
+position: absolute;
+background-color: rgba(255,255,255,1);
+width: 17%;
+height: 6%;
+right: 0;
+bottom: 30%;
+z-index: 1;
+}
+*/

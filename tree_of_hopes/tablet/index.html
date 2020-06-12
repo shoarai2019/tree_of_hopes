@@ -1,0 +1,149 @@
+<!doctype html>
+<html dir="ltr" lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=1366px"/>
+        <title>gumi Idea Tree</title>
+        <meta http-equiv="Content-Script-type" content="text/javascript">
+        <meta http-equiv="Content-Style-type" content="text/css">
+
+        <meta name="robots" content="index,follow"/>
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link rel="stylesheet" href="css/html5reset-1.6.1.css"/>
+        <link rel="stylesheet" href="css/reset.css"/>
+        <link rel="stylesheet" href="css/structure.css"/>
+        <link rel="stylesheet" href="css/titlearea.css"/>
+        <link rel="stylesheet" href="css/ending.css"/>
+
+        <script src="js/libs/createjs-2015.05.21.min.js"></script>
+        <script src="js/libs/fabric.min.js"></script>
+        <script src="js/libs/jquery-1.10.1.min.js"></script>
+        <script src="js/libs/jquery.easing.min.js"></script>
+        <script src="js/libs/jquery-animate-css-rotate-scale.js"></script>
+        <script src="js/libs/jquery.touchSwipe.min.js"></script>
+        <script src="js/libs/functions.js"></script>
+
+<!--
+        <script src="../vendor/axios/axios.min.js"></script>
+        <script src="../common/js/reconnecting-websocket.min.js"></script>
+-->
+
+<!--
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+        <script src="../common/js/libs/html2canvas.min.js"></script>
+-->
+
+
+        <script src="js/leaf.js"></script>
+        <script src="js/leafarea.js"></script>
+        <script src="js/common.js"></script>
+
+    </head>
+    <body>
+        <div id="wrapper">
+
+
+
+            <div id="titlearea">
+                <div class="title"><img src="img/start/title.png"/></div>
+                <div class="agree"><a href="javascript:checked()">同意する</a></div>
+                <div class="btn"><a href="javascript:startContent()">START</a></div>
+            </div><!--/titlearea-->
+
+            <div id="ending">
+                <div class="title"><img src="img/ending/title.png"/></div>
+            </div><!--/titlearea-->
+
+
+            <div id="contentarea">
+
+
+
+                <div id="howto" class="phase">
+
+
+                    <p class="title"><img src="img/howto/title.png" alt=""></p>
+
+                    <div class="steps">
+                        <div class="step step1">
+                            <div class="ill"><img src="img/howto/1_image.png"></div>
+                            <div class="text"><img src="img/howto/1_text.png"></div>
+                            <div class="num"><img src="img/howto/1_leaf.png" alt=""></div>
+                        </div>
+
+                        <div class="step step2">
+                            <div class="ill"><img src="img/howto/2_image.png"></div>
+                            <div class="text"><img src="img/howto/2_text.png"></div>
+                            <div class="num"><img src="img/howto/2_leaf.png" alt=""></div>
+                        </div>
+
+                        <div class="step step3">
+                            <div class="ill"><img src="img/howto/3_image.png"><img src="img/howto/3_hand.png" alt="" class="hand"></div>
+                            <div class="text"><img src="img/howto/3_text.png" alt=""></div>
+                            <div class="num"><img src="img/howto/3_leaf.png" alt=""></div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="prev"><a href="javascript:void(0)" ontouchstart="prevScene()">PREV</a></div>
+                    <div class="next"><a href="javascript:void(0)" ontouchstart="nextScene()">NEXT</a></div>
+                </div><!--/phase-->
+
+
+
+
+
+                <div id="selectLeaf" class="phase">
+                    <p class="title"><img src="img/selectLeaf/title.png"/></p>
+                    <div class="prev"><a href="javascript:prevScene()">PREV</a></div>
+                </div><!--/phase-->
+
+
+                <div id="drawMessage" class="phase">
+                    <p class="title"><img src="img/drawMessage/title.png"/></p>
+                    <div class="prev"><a href="javascript:prevScene()">PREV</a></div>
+                    <div class="next"><a href="javascript:nextScene()">NEXT</a></div>
+                    <div class="reset"><a href="javascript:resetDraw()">書き直す</a></div>
+                </div><!--/phase-->
+
+
+
+
+                <div id="checkMessage" class="phase">
+                    <p class="title"><img src="img/checkMessage/title.png"/></p>
+                    <div class="prev"><a href="javascript:prevScene()">PREV</a></div>
+                    <div class="next"><a href="javascript:nextScene()">NEXT</a></div>
+                </div><!--/phase-->
+
+
+
+                <div id="sendMessage" class="phase">
+                    <div class="arrow"><img src="img/sendMessage/arrow.png"/></div>
+                    <div class="hand"><img src="img/sendMessage/hand.png"/></div>
+                    <p class="title"><img src="img/sendMessage/title.png"/></p>
+                </div><!--/phase-->
+
+
+                <div id="leafarea">
+                    <div class="canvasarea canvasarea1">
+                        <div>
+                            <canvas id="canvas1" width="960" height="460"></canvas>
+                        </div>
+                    </div>
+                    <div class="canvasarea canvasarea2">
+                        <div>
+                            <canvas id="canvas2" width="700" height="420"></canvas>
+                        </div>
+                    </div>
+                </div><!--/leafarea-->
+
+
+            </div><!--/contentarea-->
+
+        </div>
+    </body>
+</html>

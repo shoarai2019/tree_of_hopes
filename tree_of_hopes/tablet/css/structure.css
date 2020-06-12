@@ -1,0 +1,330 @@
+@charset "utf-8";
+
+/*-----------------------------------------
+body
+----------------------------------------- */
+
+body {
+    background-color: #cae6e6;
+    overflow: hidden;
+}
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+#contentarea {
+    position: absolute;
+   width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    display: block;
+}
+
+
+#contentarea .phase {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    display: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+#contentarea .phase .next a {
+    display: block;
+    background-image: url(../img/common/btn_next.png);
+    width: calc(646px / 2);
+    height: calc(201px / 2);
+    -webkit-background-size: cover;
+    background-size:cover ;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    z-index: 999;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+#contentarea .phase .next a:active {
+    background-image: url(../img/common/btn_next_down.png);
+}
+
+
+#contentarea .phase .prev a {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 999;
+    background-image: url(../img/common/btn_back.png);
+    width: calc(646px / 2);
+    height: calc(201px / 2);
+    -webkit-background-size: cover;
+    background-size:cover ;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+#contentarea .phase .prev a:active {
+    background-image: url(../img/common/btn_back_down.png);
+}
+
+
+
+
+
+
+
+
+#contentarea #howto{
+    padding-top: 80px;
+}
+
+#contentarea #howto .title {
+
+    width: calc(268px / 2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#contentarea #howto .steps {
+    margin-top: 75px;
+    width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content:space-between;
+    -webkit-justify-content:space-between;
+
+}
+
+
+#contentarea #howto .steps .step {
+    width: calc(772px / 2);
+    position: relative;
+}
+
+#contentarea #howto .steps .step .ill {
+    border: 3px #877565 solid;
+    overflow: hidden;
+    position: relative;
+}
+#contentarea #howto .steps .step .num {
+    position: absolute;
+    left:-40px;
+    top: -40px;
+    width: calc(139px / 2);
+}
+
+#contentarea #howto .steps .step .text {
+    margin-top: 30px;
+}
+
+
+
+#contentarea #howto .steps .step.step3 .ill .hand {
+    position: absolute;
+    right: -120px;
+    top: 0px;
+    width: calc(508px / 2);
+}
+
+
+
+
+
+
+
+
+
+
+#contentarea #selectLeaf{
+    padding-top: 80px;
+}
+
+#contentarea #selectLeaf .title {
+
+    width: calc(1375px / 2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+#contentarea #drawMessage{
+    padding-top: 80px;
+}
+
+#contentarea #drawMessage .title {
+
+    width: calc(1593px / 2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+#contentarea #drawMessage .reset a {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    z-index: 999;
+    background-image: url(../img/drawMessage/retrybtn.png);
+    width: calc(646px / 2);
+    height: calc(201px / 2);
+    margin-left: calc(-646px / 4);
+    -webkit-background-size: cover;
+    background-size:cover ;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+#contentarea #drawMessage .reset a:active {
+    background-image: url(../img/drawMessage/retrybtn_down.png);
+}
+
+
+
+
+
+#contentarea #checkMessage{
+    padding-top: 80px;
+}
+
+#contentarea #checkMessage .title {
+    width: calc(1405px / 2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#contentarea #sendMessage {
+    z-index: 4;
+}
+
+
+#contentarea #sendMessage .title {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    text-align: center;
+    width: calc(2050px / 2);
+    margin-left: calc(-2050px / 4);
+}
+
+#contentarea #sendMessage .arrow {
+    position: absolute;
+    right: 180px;
+    top: 200px;
+    width: calc(283px / 2);
+    height: calc(802px / 2);
+}
+
+
+#contentarea #sendMessage .hand {
+    position: absolute;
+    right:100px;
+    top: 330px;
+    width: calc(402px / 2);
+    height: calc(576px / 2);
+}
+
+
+
+
+
+
+
+
+
+
+
+#contentarea #leafarea {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    /*background-color: rgba(255,255,255,0.5);*/
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+}
+#contentarea #leafarea .leaf {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 0px;
+    width: 0px;
+}
+#contentarea #leafarea .leaf .inner {
+    position: absolute;
+    height: 460px;
+    width: 920px;
+    left: -460px;
+    top: -230px;
+}
+#contentarea #leafarea .leaf img {
+    width: 920px;
+    height: 460px;
+}
+#contentarea #leafarea .canvasarea1 {
+    height: 460px;
+    width: 960px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+#contentarea #leafarea .canvasarea2 {
+    height: 420px;
+    width: 700px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+/*    background-color: rgba(255,0,0,0.5);*/
+    margin-left: calc(-700px / 2);
+    margin-top: calc(-420px / 2);
+}
+
+
+

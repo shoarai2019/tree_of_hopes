@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>receiver</title>
+</head>
+<body>
+<div id="app">
+    <h1>受信テスト</h1>
+    <img v-bind:src="imgSrc" alt="">
+</div>
+<script src="vendor/axios/axios.min.js"></script>
+<script src="vendor/vue/vue.min.js"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                imgSrc: null,
+                wsc: null
+            }
+        },
+        methods: {
+            initWsc() {
+                const url = 'ws://localhost/tree_of_hopes/ws';
+                const wsc = new WebSocket(url);
+                wsc.onopen = (e) => {
+                    console.log("Opened: ", new Date());
+                };
+                wsc.onclose = (e) => {
+                    console.log("Closed: ", new Date());
+                };
+                wsc.onmessage = this.onmessage;
+                this.wsc = wsc;
+            },
+            onmessage(e) {
+                const message = JSON.parse(e.data);
+                const body = JSON.parse(message.body);
+                const strSVG = 'data:image/svg+xml,' + encodeURIComponent(body.canvas);
+                this.imgSrc = strSVG;
+            }
+        },
+        async created() {
+            this.initWsc();
+        }
+    })
+</script>
+</body>
+</html>

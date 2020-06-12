@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>無題ドキュメント</title>
+<script type="text/javascript" src="js/createjs-2015.05.21.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="js/jquery-animate-css-rotate-scale.js"></script>
+<script type="text/javascript" src="js/textresizedetector.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script>
+
+var arrayString="[\n";
+for(var j=0;j<10;j++){
+	arrayString+="[";
+	var array=[]; 
+	for(var i=0;i<100;i++){
+		array[i]=i;
+	}
+	array=ArrayControl.shuffle(array);
+	arrayString+=String(array)+"]";
+	if(j<9) arrayString+=",";
+	arrayString+="\n";
+}
+arrayString+="]";
+document.write(arrayString)
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
